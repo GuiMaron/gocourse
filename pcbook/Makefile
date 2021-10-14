@@ -5,7 +5,7 @@ gen:
 	make clean && clear && protoc --proto_path=proto --go_out=plugins=grpc:pb proto/*.proto
 
 init:
-	clear && go mod init github.com/GuiMaron/gocourse
+	clear && rm -f go.mod && rm -f go.sum && go mod init pcbook
 
 run:
 	clear && go run *.go

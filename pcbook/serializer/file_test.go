@@ -1,7 +1,7 @@
 package serializer_test
 
 import (
-	"github.com/GuiMaron/gocourse/pcbook/pb"
+	"github.com/GuiMaron/gocourse/pcbook/pb/pcbook"
 	"github.com/GuiMaron/gocourse/pcbook/sample"
 	"github.com/GuiMaron/gocourse/pcbook/serializer"
 	"github.com/stretchr/testify/require"

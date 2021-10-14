@@ -1,7 +1,7 @@
 package sample
 
 import (
-	pcbook "github.com/GuiMaron/gocourse/pcbook/pb"
+	"github.com/GuiMaron/gocourse/pcbook/pb/pcbook"
 	"github.com/golang/protobuf/ptypes"
 )
 
