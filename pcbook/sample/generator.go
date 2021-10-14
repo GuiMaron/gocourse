@@ -1,6 +1,6 @@
 package sample
 
-import "github.com/GuiMaron/gocourse/pcbook/pb"
+import "github.com/GuiMaron/gocourse/pcbook"
 
 func NewKeyboard() *pb.Keyboard {
 
