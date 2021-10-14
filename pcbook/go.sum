@@ -1,6 +1,4 @@
-github.com/GuiMaron/gocourse v0.0.0-20211014224603-b4b0ada02971 h1:Kc08OqBzX6bjOmSuAQexYnndceXRcBzVYnqzNQUWC64=
-github.com/GuiMaron/gocourse/pcbook v0.0.0-20211014231441-ce220ad51c14 h1:7TAPr8gBLB4IY2bPKHzqfxcUjuG41LFxkNg55Ulmrzg=
-github.com/GuiMaron/gocourse/pcbook v0.0.0-20211014231441-ce220ad51c14/go.mod h1:jjetBvLHGw88mUeslIvrK++B9UE5Mh+SOvVUHBxOrf0=
+github.com/GuiMaron/gocourse v0.0.0-20211014233435-287436143f94 h1:xX9Y6XkGWJqxA6ywM2g+qODscuw8tPt6G0XNf/bnegs=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/golang/protobuf v1.5.0/go.mod h1:FsONVRAS9T7sI+LIUmWTfcYkHO4aIWwzhcaSAoJOfIk=
