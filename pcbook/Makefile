@@ -10,5 +10,8 @@ init:
 run:
 	clear && go run *.go
 
+test:
+	clear && go run test
+
 tidy:
 	clear && go mod tidy

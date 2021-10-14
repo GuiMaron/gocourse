@@ -2,6 +2,7 @@ package sample
 
 import (
 	pcbook "github.com/GuiMaron/gocourse/pcbook/pb"
+	"github.com/golang/protobuf/ptypes"
 )
 
 func NewCPU () *pcbook.CPU {
@@ -75,6 +76,33 @@ func NewKeyboard () *pcbook.Keyboard {
 
 }
 
+func NewLaptop () *pcbook.Laptop {
+
+	brand	:= randomLaptopBrand()
+	name	:= randomLaptopName(brand)
+
+	laptop := &pcbook.Laptop {
+		Id:				randomId(),
+		Brand:			brand,
+		Name:			name,
+		Cpu:			NewCPU(),
+		Ram:			NewRam(),
+		Screen: 		NewScreen(),
+		Keyboard:		NewKeyboard(),
+		Gpus:			[]*pcbook.GPU{ NewGPU() },
+		Storages:  		[]*pcbook.Storage{ NewSSD(), NewHDD() },
+		Weight:			&pcbook.Laptop_WeightKg {
+			WeightKg:	randomFloat32(1.0, 3.0),
+		},
+		PriceUsd: 		randomFloat32(1500, 3000),
+		ReleaseYear:	uint32(randomInt(2015, 2020)),
+		UpdatedAt: 		ptypes.TimestampNow(),
+	}
+
+	return laptop
+
+}
+
 func NewRam () *pcbook.Memory {
 
 	ram	:= &pcbook.Memory {
@@ -90,6 +118,9 @@ func NewScreen () *pcbook.Screen {
 
 	screen	:= &pcbook.Screen {
 		SizeInches:	randomFloat32(13, 17),
+		Resolution: randomScreenResolution(),
+		Panel:		randomScreenPanel(),
+		Multitouch: randomBool(),
 	}
 
 	return screen

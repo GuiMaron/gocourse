@@ -2,6 +2,7 @@ package sample
 
 import (
 	pcbook "github.com/GuiMaron/gocourse/pcbook/pb"
+	"github.com/google/uuid"
 	"math"
 	"math/rand"
 	"time"
@@ -25,6 +26,15 @@ func randomFloat32 (min float32, max float32) float32 {
 	max = float32(math.Max(float64(min),  float64(max)))
 
 	return min + (getRand().Float32() * (max - min))
+
+}
+
+func randomFloat64 (min float64, max float64) float64 {
+
+	min = math.Min(min, max)
+	max = math.Max(min, max)
+
+	return min + (getRand().Float64() * (max - min))
 
 }
 
@@ -116,6 +126,49 @@ func randomGPUName (brand string) string {
 }
 
 /**
+ *	Laptop
+ */
+func randomId () string {
+	return uuid.New().String()
+}
+
+func randomLaptopBrand () string {
+	return randomStringFromSet("APPLE", "DELL", "LENOVO")
+}
+
+func randomLaptopName (brand string) string {
+
+	switch brand {
+
+	case "APPLE":
+
+		return randomStringFromSet(
+			"Macbook Air",
+					"Macbook Pro",
+				)
+
+	case "DELL":
+
+		return randomStringFromSet(
+			"Latitude",
+					"Vostro",
+					"XPS",
+					"Alienware",
+				)
+
+	default:
+
+		return randomStringFromSet(
+			"Thinkpad X1",
+					"Thinkpad P1",
+					"Thinkpad P53",
+				)
+
+	}
+
+}
+
+/**
  * 	Keyboard
  */
 func randomKeyboardLayout () pcbook.Keyboard_Layout {
@@ -132,5 +185,37 @@ func randomKeyboardLayout () pcbook.Keyboard_Layout {
 		return pcbook.Keyboard_DVORAK
 
 	}
+
+}
+
+/**
+ *	Screen
+ */
+func randomScreenPanel () pcbook.Screen_Panel {
+
+	switch getRand().Intn(3) {
+
+	case 1:
+		return pcbook.Screen_IPS
+	case 2:
+		return pcbook.Screen_OLED
+	default:
+		return pcbook.Screen_LED
+
+	}
+
+}
+
+func randomScreenResolution () *pcbook.Screen_Resolution {
+
+	height	:= randomInt(1080, 4320)
+	width	:= height * (16 / 9)
+
+	resolution := &pcbook.Screen_Resolution{
+		Width:  uint32(width),
+		Height: uint32(height),
+	}
+
+	return resolution
 
 }
