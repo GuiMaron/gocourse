@@ -1,0 +1,27 @@
+syntax="proto3";
+
+option go_package = "github.com/GuiMaron/gocourse";
+
+package gocourse.pcbook;
+
+message Screen {
+
+  message Resolution {
+    uint32  width   = 1;
+    uint32  height  = 2;
+  }
+
+  enum Panel {
+    UNKNOWN = 0;
+    IPS     = 1;
+    OLED    = 2;
+    LED     = 3;
+    CRT     = 4;
+  }
+
+  float       size_inches = 1;
+  Resolution  resolution  = 2;
+  Panel       panel       = 3;
+  bool        multitouch  = 4;
+
+}
