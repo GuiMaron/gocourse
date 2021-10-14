@@ -5,6 +5,7 @@ import (
 	"github.com/GuiMaron/gocourse/pcbook/sample"
 	"github.com/GuiMaron/gocourse/pcbook/serializer"
 	"github.com/stretchr/testify/require"
+	"google.golang.org/protobuf/proto"
 	"testing"
 )
 
@@ -24,5 +25,6 @@ func TestFileSerializer (t *testing.T) {
 	serializer.ReadProtobufFromBinaryFile(binaryFile, laptop2)
 
 	require.NoError(t, err)
+	require.True(t, proto.Equal(laptop1, laptop2))
 
 }
