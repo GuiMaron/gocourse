@@ -11,7 +11,7 @@ run:
 	clear && go run *.go
 
 test:
-	clear && go run test
+	clear && go test ./serializer
 
 tidy:
 	clear && go mod tidy
