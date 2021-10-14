@@ -1,4 +1,4 @@
-package serializer_test
+package serializer
 
 import (
 	"github.com/GuiMaron/gocourse/pcbook/sample"
@@ -13,8 +13,8 @@ func TestFileSerializer (t *testing.T) {
 
 	binaryFile	:= "../tmp/laptop.bin"
 
-	laptop1	:= NewLaptop()
-	err 	:= WriteProtobufToBinaryFile(laptop1, binaryFile)
+	laptop1	:= sample.NewLaptop()
+	err 	:= serializer.WriteProtobufToBinaryFile(laptop1, binaryFile)
 
 	require.NoError(t, err)
 
