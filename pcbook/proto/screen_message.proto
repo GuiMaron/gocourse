@@ -19,7 +19,7 @@ message Screen {
     CRT     = 4;
   }
 
-  uint32      size_inches = 1;
+  float       size_inches = 1;
   Resolution  resolution  = 2;
   Panel       panel       = 3;
   bool        multitouch  = 4;

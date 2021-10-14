@@ -89,7 +89,7 @@ func NewRam () *pcbook.Memory {
 func NewScreen () *pcbook.Screen {
 
 	screen	:= &pcbook.Screen {
-		SizeInches:	uint32(randomInt(13, 17)),
+		SizeInches:	randomFloat32(13, 17),
 	}
 
 	return screen
