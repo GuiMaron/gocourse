@@ -1,4 +1,4 @@
-module github.com/GuiMaron/gocourse
+module github.com/GuiMaron/gocourse/pcbook
 
 go 1.13
 
