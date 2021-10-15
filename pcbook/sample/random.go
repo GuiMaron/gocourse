@@ -1,7 +1,7 @@
 package sample
 
 import (
-	"github.com/GuiMaron/gocourse/pcbook/pb/pcbook"
+	pcbook "github.com/GuiMaron/gocourse/pcbook/pb/proto"
 	"github.com/google/uuid"
 	"math"
 	"math/rand"

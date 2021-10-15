@@ -42,6 +42,7 @@ func WriteProtobufToBinaryFile (message proto.Message, filename string) error {
 
 }
 
+/*
 func WriteProtobufToJSONFile (message proto.Message, filename string) error {
 
 	data, err := ProtobufToJSON(message)
@@ -59,3 +60,4 @@ func WriteProtobufToJSONFile (message proto.Message, filename string) error {
 	return nil
 
 }
+ */

@@ -1,20 +1,20 @@
 package serializer_test
 
 import (
-	"github.com/GuiMaron/gocourse/pcbook/pb/pcbook"
+	"fmt"
+	pcbook "github.com/GuiMaron/gocourse/pcbook/pb/proto"
 	"github.com/GuiMaron/gocourse/pcbook/sample"
 	"github.com/GuiMaron/gocourse/pcbook/serializer"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/protobuf/proto"
+	"reflect"
+	"strings"
 	"testing"
 )
 
 func TestFileSerializer (t *testing.T) {
 
-	t.Parallel()
-
 	binaryFile	:= "../tmp/laptop.bin"
-	jsonFile	:= "../tmp/laptop.json"
 
 	laptop1	:= sample.NewLaptop()
 	laptop2 := &pcbook.Laptop{}
